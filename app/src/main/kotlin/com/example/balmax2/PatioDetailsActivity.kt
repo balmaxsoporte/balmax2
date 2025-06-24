@@ -6,25 +6,30 @@ import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.balmax2.adapters.ParkingSpotAdapter
 import com.example.balmax2.data.ParkingSpot
+import com.example.balmax2.data.ParkingSpotRepository
 
 class PatioDetailsActivity : AppCompatActivity() {
 
     private lateinit var parkingSpotAdapter: ParkingSpotAdapter
+    private lateinit var parkingSpotRepository: ParkingSpotRepository
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_patio_details)
 
+        // Obtener número del patio desde Intent
         val patioNumber = intent.getIntExtra("PATIO_NUMBER", 1)
-
-        // Mostrar número del patio en el título
         title = "Patio $patioNumber"
 
-        // Lista de puestos (simulada)
-        val spots = generateDummySpots(20) // 20 puestos por patio
+        // Inicializar repositorio de puestos
+        parkingSpotRepository = ParkingSpotRepository(this)
+        parkingSpotRepository.open()
 
+        // Obtener puestos del patio desde la base de datos
+        val spots = parkingSpotRepository.getSpotsByPatio(patioNumber)
+
+        // Configurar adaptador
         val listView = findViewById<ListView>(R.id.parkingSpotsListView)
-
         parkingSpotAdapter = ParkingSpotAdapter(this, spots)
         listView.adapter = parkingSpotAdapter
 
@@ -39,13 +44,8 @@ class PatioDetailsActivity : AppCompatActivity() {
         }
     }
 
-    // Genera datos simulados para mostrar en la lista
-    private fun generateDummySpots(count: Int): List<ParkingSpot> {
-        val spots = mutableListOf<ParkingSpot>()
-        for (i in 1..count) {
-            val plate = if (i % 3 == 0) "ARREND-$i" else if (i % 5 == 0) "PART-$i" else ""
-            spots.add(ParkingSpot(i, "", "", plate))
-        }
-        return spots
+    override fun onDestroy() {
+        super.onDestroy()
+        parkingSpotRepository.close()
     }
 }
