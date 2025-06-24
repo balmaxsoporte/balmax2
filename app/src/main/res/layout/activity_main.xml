@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Imagen del mapa del estacionamiento -->
+    <ImageView
+        android:id="@+id/parkingMapImageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/parking_map"
+        android:scaleType="centerInside"
+        android:contentDescription="Mapa del Estacionamiento" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Acceso Rápido"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
+    <!-- Botones de acceso rápido a patios -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="3"
+        android:horizontalSpacing="16dp"
+        android:verticalSpacing="16dp"
+        android:layout_marginTop="8dp">
+
+        <Button
+            android:id="@+id/patio1Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Patio 1" />
+
+        <Button
+            android:id="@+id/patio2Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Patio 2" />
+
+        <Button
+            android:id="@+id/patio3Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Patio 3" />
+
+        <Button
+            android:id="@+id/patio4Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Patio 4" />
+
+        <Button
+            android:id="@+id/patio5Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Patio 5" />
+
+        <Button
+            android:id="@+id/patio6Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Patio 6" />
+
+        <Button
+            android:id="@+id/patio7Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Patio 7" />
+    </GridLayout>
+
+</LinearLayout>
