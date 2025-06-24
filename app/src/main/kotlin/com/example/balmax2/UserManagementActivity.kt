@@ -1,11 +1,14 @@
 package com.example.balmax2
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import com.example.balmax2.data.User
 import com.example.balmax2.adapters.UserAdapter
+import com.example.balmax2.data.User
 import com.example.balmax2.data.UserRepository
+import com.example.balmax2.utils.FileUtils
+import java.util.*
 
 class UserManagementActivity : AppCompatActivity() {
 
@@ -20,9 +23,11 @@ class UserManagementActivity : AppCompatActivity() {
         // Inicializar repositorio de usuarios
         userRepository = UserRepository(this)
 
-        // Cargar usuarios predeterminados si es necesario
+        // Cargar usuario admin por defecto si no existe
         if (userRepository.getAllUsers().isEmpty()) {
-            userRepository.addUser(User(0, "admin", "admin", true, true, true))
+            userRepository.addUser(
+                User(0, "admin", "admin", true, true, true)
+            )
         }
 
         // Configurar adaptador
@@ -57,12 +62,20 @@ class UserManagementActivity : AppCompatActivity() {
             userRepository.addUser(newUser)
             userAdapter.updateUsers(userRepository.getAllUsers().toMutableList())
 
+            // Exportar patentes a txt
+            val allUsers = userRepository.getAllUsers()
+            val plates = allUsers.map { it.username }
+            FileUtils.saveRegistroToFile(this, plates)
+            FileUtils.saveArrendatariosToFile(this, plates.filter { it.startsWith("ARREND") })
+
             // Limpiar formulario
             newUsernameEditText.text.clear()
             newPasswordEditText.text.clear()
             editUsersCheckbox.isChecked = false
             editSpotsCheckbox.isChecked = false
             editPatioLicensesCheckbox.isChecked = false
+
+            Toast.makeText(this, "Usuario agregado correctamente", Toast.LENGTH_SHORT).show()
         }
     }
 }
