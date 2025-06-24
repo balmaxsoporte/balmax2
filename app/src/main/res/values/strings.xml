@@ -1,9 +1,52 @@
 <resources>
+    <!-- App Name -->
     <string name="app_name">Balmax2</string>
+
+    <!-- Pantalla de Login -->
     <string name="login">Iniciar Sesión</string>
     <string name="username_hint">Usuario</string>
     <string name="password_hint">Contraseña</string>
     <string name="admin_username">admin</string>
     <string name="admin_password">admin</string>
     <string name="welcome">Bienvenido</string>
+
+    <!-- Pantalla Principal -->
+    <string name="quick_access">Acceso Rápido</string>
+
+    <!-- Detalles del Patio -->
+    <string name="select_spot">Seleccione un puesto</string>
+
+    <!-- Registro de Puesto -->
+    <string name="vehicle_type">Tipo de Vehículo</string>
+    <string name="plate">Patente</string>
+    <string name="trailer_option">Opción Adicional</string>
+    <string name="save">Guardar</string>
+    <string name="enter_plate">Ingrese la patente</string>
+
+    <!-- Gestión de Usuarios -->
+    <string name="users_title">Usuarios Existentes</string>
+    <string name="add_user_title">Agregar Nuevo Usuario</string>
+    <string name="username">Nombre de usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="permissions">Permisos</string>
+    <string name="can_edit_users">Editar Usuarios</string>
+    <string name="can_edit_spots">Editar Puestos</string>
+    <string name="can_edit_patio_licenses">Editar Patentes de Patio</string>
+    <string name="add_user">Agregar Usuario</string>
+    <string name="user_added">Usuario agregado correctamente</string>
+    <string name="fill_all_fields">Por favor complete todos los campos</string>
+
+    <!-- Archivos TXT -->
+    <string name="export_success">Archivos exportados correctamente</string>
+    <string name="import_success">Archivos importados correctamente</string>
+    <string name="error_reading_file">Error al leer el archivo</string>
+    <string name="error_writing_file">Error al escribir el archivo</string>
+
+    <!-- Mensajes Generales -->
+    <string name="success">Éxito</string>
+    <string name="error">Error</string>
+    <string name="confirm">Confirmar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="close">Cerrar</string>
+    <string name="ok">Aceptar</string>
 </resources>
