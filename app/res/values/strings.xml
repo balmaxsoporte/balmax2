@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Balmax2</string>
+    <string name="login">Iniciar Sesión</string>
+    <string name="username_hint">Usuario</string>
+    <string name="password_hint">Contraseña</string>
+    <string name="admin_username">admin</string>
+    <string name="admin_password">admin</string>
+    <string name="welcome">Bienvenido</string>
+</resources>
