@@ -1,9 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Colores principales -->
     <color name="colorPrimary">#007AFF</color>
     <color name="colorPrimaryDark">#005BB5</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="green">#4CAF50</color>
-    <color name="blue">#2196F3</color>
-    <color name="white">#FFFFFF</color>
+
+    <!-- Colores de estado -->
+    <color name="green">#4CAF50</color> <!-- Arrendatario -->
+    <color name="blue">#2196F3</color> <!-- Particular -->
+    <color name="white">#FFFFFF</color> <!-- Default -->
+    <color name="gray">#E0E0E0</color> <!-- Fondo desactivado -->
+
+    <!-- Colores adicionales -->
     <color name="black">#000000</color>
+    <color name="red">#D32F2F</color>
+    <color name="yellow">#FBC02D</color>
 </resources>
