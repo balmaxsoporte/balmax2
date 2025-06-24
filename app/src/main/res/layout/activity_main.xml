@@ -1,78 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:layout_height="match_parent">
 
-    <!-- Imagen del mapa del estacionamiento -->
-    <ImageView
-        android:id="@+id/parkingMapImageView"
+    <!-- Contenido principal -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:src="@drawable/parking_map"
-        android:scaleType="centerInside"
-        android:contentDescription="Mapa del Estacionamiento" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
 
-    <TextView
+        <!-- Imagen del mapa del estacionamiento -->
+        <ImageView
+            android:id="@+id/parkingMapImageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/parking_map"
+            android:scaleType="centerInside"
+            android:contentDescription="Mapa del Estacionamiento" />
+
+        <!-- Título de acceso rápido -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Acceso Rápido"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <!-- Botones de acceso rápido a patios -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:rowCount="3"
+            android:horizontalSpacing="16dp"
+            android:verticalSpacing="16dp"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/patio1Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Patio 1" />
+
+            <Button
+                android:id="@+id/patio2Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Patio 2" />
+
+            <Button
+                android:id="@+id/patio3Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Patio 3" />
+
+            <Button
+                android:id="@+id/patio4Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Patio 4" />
+
+            <Button
+                android:id="@+id/patio5Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Patio 5" />
+
+            <Button
+                android:id="@+id/patio6Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Patio 6" />
+
+            <Button
+                android:id="@+id/patio7Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Patio 7" />
+        </GridLayout>
+
+    </LinearLayout>
+
+    <!-- Menú lateral (NavigationView) -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Acceso Rápido"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_marginTop="16dp" />
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/drawer_menu"
+        app:headerLayout="@layout/nav_header"
+        android:background="@android:color/white"/>
 
-    <!-- Botones de acceso rápido a patios -->
-    <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:columnCount="3"
-        android:rowCount="3"
-        android:horizontalSpacing="16dp"
-        android:verticalSpacing="16dp"
-        android:layout_marginTop="8dp">
-
-        <Button
-            android:id="@+id/patio1Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Patio 1" />
-
-        <Button
-            android:id="@+id/patio2Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Patio 2" />
-
-        <Button
-            android:id="@+id/patio3Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Patio 3" />
-
-        <Button
-            android:id="@+id/patio4Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Patio 4" />
-
-        <Button
-            android:id="@+id/patio5Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Patio 5" />
-
-        <Button
-            android:id="@+id/patio6Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Patio 6" />
-
-        <Button
-            android:id="@+id/patio7Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Patio 7" />
-    </GridLayout>
-
-</LinearLayout>
+</androidx.drawerlayout.widget.DrawerLayout>
