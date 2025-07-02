@@ -30,4 +30,11 @@ class UserAdapter(context: Context, private val users: MutableList<User>) :
 
         return view
     }
+
+    // ✅ Método nuevo para actualizar los datos del adaptador
+    fun updateUsers(newUsers: List<User>) {
+        users.clear()
+        users.addAll(newUsers)
+        notifyDataSetChanged()
+    }
 }

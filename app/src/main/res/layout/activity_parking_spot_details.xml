@@ -21,7 +21,7 @@
         android:id="@+id/vehicleTypeSpinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:prompt="Tipo de Vehículo"
+        android:prompt="@string/vehicle_type_prompt"
         android:layout_marginBottom="16dp"/>
 
     <!-- Patente -->
@@ -41,7 +41,7 @@
         android:id="@+id/trailerSpinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:prompt="Opción Adicional"
+        android:prompt="@string/trailer_prompt"
         android:layout_marginBottom="16dp"/>
 
     <!-- Botón de guardar -->

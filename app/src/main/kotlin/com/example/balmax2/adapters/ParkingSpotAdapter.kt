@@ -9,7 +9,6 @@ import android.widget.ImageButton
 import android.widget.TextView
 import com.example.balmax2.R
 import com.example.balmax2.data.ParkingSpot
-import com.example.balmax2.utils.ColorUtils
 
 class ParkingSpotAdapter(context: Context, private val spots: MutableList<ParkingSpot>) :
     ArrayAdapter<ParkingSpot>(context, 0, spots) {

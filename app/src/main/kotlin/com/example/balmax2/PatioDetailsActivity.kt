@@ -26,7 +26,7 @@ class PatioDetailsActivity : AppCompatActivity() {
         parkingSpotRepository.open()
 
         // Obtener puestos del patio desde la base de datos
-        val spots = parkingSpotRepository.getSpotsByPatio(patioNumber)
+        val spots = parkingSpotRepository.getSpotsByPatio(patioNumber).toMutableList()
 
         // Configurar adaptador
         val listView = findViewById<ListView>(R.id.parkingSpotsListView)

@@ -1,14 +1,11 @@
 package com.example.balmax2
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.example.balmax2.adapters.UserAdapter
 import com.example.balmax2.data.User
 import com.example.balmax2.data.UserRepository
-import com.example.balmax2.utils.FileUtils
-import java.util.*
 
 class UserManagementActivity : AppCompatActivity() {
 

@@ -6,6 +6,10 @@
     <color name="colorAccent">#FF4081</color>
 
     <!-- Colores de estado -->
+    <color name="arrendatario_color">#4CAF50</color> <!-- verde --><!-- Arrendatario -->
+    <color name="particular_color">#2196F3</color>   <!-- Azul --><!-- Particular -->
+    <color name="default_color">#FFFFFF</color>      <!-- Blanco -->
+
     <color name="green">#4CAF50</color> <!-- Arrendatario -->
     <color name="blue">#2196F3</color> <!-- Particular -->
     <color name="white">#FFFFFF</color> <!-- Default -->

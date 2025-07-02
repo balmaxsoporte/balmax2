@@ -18,6 +18,8 @@
 
     <!-- Registro de Puesto -->
     <string name="vehicle_type">Tipo de Vehículo</string>
+    <string name="vehicle_type_prompt">Tipo de Vehículo</string>
+    <string name="trailer_prompt">Opción Adicional</string>
     <string name="plate">Patente</string>
     <string name="trailer_option">Opción Adicional</string>
     <string name="save">Guardar</string>
@@ -47,6 +49,7 @@
     <string name="error">Error</string>
     <string name="confirm">Confirmar</string>
     <string name="cancel">Cancelar</string>
+    <string name="open">Abrir</string>
     <string name="close">Cerrar</string>
     <string name="ok">Aceptar</string>
 </resources>

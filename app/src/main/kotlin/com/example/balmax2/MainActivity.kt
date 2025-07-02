@@ -2,6 +2,7 @@ package com.example.balmax2
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
@@ -46,7 +47,7 @@ class MainActivity : AppCompatActivity() {
 
         // Menú lateral
         navView.setNavigationItemSelectedListener { menuItem ->
-            when (menuItem.itemId) {
+            when(menuItem.itemId) {
                 R.id.drawerUserManagementBtn -> {
                     startActivity(Intent(this, UserManagementActivity::class.java))
                     drawerLayout.closeDrawers()
@@ -69,7 +70,10 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    override fun onSupportNavigateUp(): Boolean {
-        return toggle.onOptionsItemSelected(super.onBackPressedDispatcher.hashCode()) || super.onSupportNavigateUp()
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (toggle.onOptionsItemSelected(item)) {
+            return true
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
